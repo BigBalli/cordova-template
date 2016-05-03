@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title></title>
+        <script src="js/fastclick.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script>
+        	window.onerror=function(a,b,c){
+        		if (c>1) {
+        			alert(a+'\n'+b.substring(b.lastIndexOf("/"))+'\n'+c);
+        		}
+        	}
+			if (navigator.userAgent.match(/iP/)) {
+				var js = document.createElement("script");
+				js.src = "cordova.js";
+				document.querySelector("head").appendChild(js);
+				document.addEventListener("deviceready",onDeviceReady,false);
+			}
+        </script>
+    	<script src="js/notie.js"></script>
+    </head>
+    <body onload="inizio()">
+    </body>
+</html>
